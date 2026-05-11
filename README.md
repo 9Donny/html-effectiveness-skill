@@ -63,6 +63,10 @@
 将 `skill.md` 复制到 Claude Code 的 skills 目录:
 
 ```bash
+# 方法 1: 直接克隆到 skills 目录
+git clone https://github.com/ghoulvspol/html-effectiveness-skill.git ~/.claude/skills/html-effectiveness
+
+# 方法 2: 手动复制
 mkdir -p ~/.claude/skills/html-effectiveness
 cp skill.md ~/.claude/skills/html-effectiveness/skill.md
 ```
@@ -140,7 +144,7 @@ cp skill.md ~/.claude/skills/html-effectiveness/skill.md
 
 ## 演示
 
-**在线 Demo:** [https://ghoulvspol.github.io/html-effectiveness-site/](https://ghoulvspol.github.io/html-effectiveness-site/)
+**在线 Demo:** [https://ghoulvspol.github.io/html-effectiveness-skill/](https://ghoulvspol.github.io/html-effectiveness-skill/)
 
 Demo 包含 5 种交互模式的实际运行效果:
 
@@ -157,7 +161,7 @@ Demo 包含 5 种交互模式的实际运行效果:
 open demo/index.html
 
 # 或启动本地服务器
-cd demo && python3 -m http.server 8080
+python3 -m http.server 8080 --directory demo
 # 访问 http://localhost:8080
 ```
 
@@ -177,8 +181,10 @@ cd demo && python3 -m http.server 8080
 html-effectiveness-skill/
 ├── README.md              # 本文件
 ├── skill.md               # Claude Code skill 定义
-└── demo/
-    └── index.html         # 在线演示（5 种模式）
+├── demo/
+│   └── index.html         # 演示源文件
+└── docs/
+    └── index.html         # GitHub Pages 部署（在线演示）
 ```
 
 ## 许可
